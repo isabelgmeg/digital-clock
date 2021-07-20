@@ -1,84 +1,52 @@
+import React, { useEffect, useState } from "react";
+
+import { numbers } from "./numberCoords";
+
 import "./App.scss";
 
 import Clock from "./Clock";
 
 function App() {
-  const a = ["a", 0, 90];
-  const b = ["b", 0, 180];
-  const c = ["c", 180, 90];
-  const d = ["d", 270, 90];
-  const e = ["e", 270, 0];
-  const f = ["f", 270, 180];
-  const g = ["g", 315, 315];
-  const h = ["h", 135, 135];
+  console.log(numbers[0]);
+  // const [time, SetTime] = useState("");
+  // const [firstMinute, setFirstMinute] = useState();
+  // const [secondMinute, setSecondMinute] = useState();
 
-  const zero = [
-    a,
-    b,
-    b,
-    c,
-    d,
-    a,
-    c,
-    d,
-    d,
-    d,
-    d,
-    d,
-    d,
-    d,
-    d,
-    d,
-    d,
-    e,
-    f,
-    d,
-    e,
-    b,
-    b,
-    f,
-  ];
+  // const [firstHour, setFirstHour] = useState();
+  // const [secondHour, setSecondHour] = useState();
 
-  const one = [
-    a,
-    b,
-    c,
-    h,
-    e,
-    c,
-    d,
-    h,
-    g,
-    d,
-    d,
-    h,
-    g,
-    d,
-    d,
-    h,
-    a,
-    f,
-    e,
-    c,
-    e,
-    b,
-    b,
-    f,
-  ];
+  // SetTime(new Date());
+  // console.log(time);
+
+  // // useEffect(() => {
+  // // }, [time]);
+
+  // setInterval(function (currentNumber) {
+  //   let newNumber = currentNumber + 1;
+  //   paintNumber(newNumber);
+  // }, 60 * 1000);
+
+  // const paintNumber = (number) => {
+  //   numbers[number].map((coord, index) => {
+  //     return (
+  //       <Clock key={index} hourDegrees={coord[0]} minuteDegrees={coord[1]} />
+  //     );
+  //   });
+  // };
 
   return (
     <div className="App">
       <main>
         <div className="clock-wrap">
           <section className="number">
-            {zero.map((coord) => {
-              return <Clock hourDegrees={coord[1]} minuteDegrees={coord[2]} />;
-            })}
-          </section>
-
-          <section className="number">
-            {one.map((coord) => {
-              return <Clock hourDegrees={coord[1]} minuteDegrees={coord[2]} />;
+            {numbers[0].map((coord, index) => {
+              return (
+                <Clock
+                  key={index}
+                  hourDegrees={coord[0]}
+                  minuteDegrees={coord[1]}
+                />
+              );
             })}
           </section>
         </div>

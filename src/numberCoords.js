@@ -1,11 +1,11 @@
 export const a = [0, 90];
-const b = [0, 180];
-const c = [180, 90];
-const d = [270, 90];
-const e = [270, 0];
-const f = [270, 180];
-const g = [315, 315];
-const h = [135, 135];
+export const b = [0, 180];
+export const c = [180, 90];
+export const d = [270, 90];
+export const e = [270, 0];
+export const f = [270, 180];
+export const g = [315, 315];
+export const h = [135, 135];
 
 export const zero = [
   a,
@@ -275,4 +275,17 @@ export const nine = [
   b,
   b,
   f,
+];
+
+export const numbers = [
+  zero,
+  one,
+  two,
+  three,
+  four,
+  five,
+  six,
+  seven,
+  eight,
+  nine,
 ];
