@@ -3,89 +3,93 @@
 }
 
 main {
-  display: flex;
-  background-color: #ecf0f3;
+  background-color: #e9e7ee;
   height: 100vh;
+  position: relative;
+}
+
+.splash {
+  background-color: black;
+  color: white;
+  height: 20vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    font-size: 1.5rem;
+    width: 54vw;
+    margin: 0;
+    text-align: end;
+  }
+  &__pic {
+    height: 80%;
+    margin-left: 6rem;
+
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
 }
 
 .clock-wrap {
   display: flex;
-  width: 50%;
-  height: fit-content;
-  padding-top: 20vw;
-  padding-bottom: 20wv;
+  width: 80%;
+  margin: 14vh auto auto auto;
+  background-size: contain;
+  justify-content: space-between;
 }
 
 .number {
-  width: 50%;
   display: grid;
+  width: 50%;
   grid-template-columns: repeat(4, 25%);
+  row-gap: 1vw;
 }
 
-.clock {
+.minutes,
+.hours,
+.seconds {
+  display: flex;
+  width: 45%;
+}
+
+.separation {
+  display: grid;
+  grid-template-columns: 1 auto;
+  row-gap: 1vw;
+}
+
+.decoration {
+  height: 60vh;
   width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background-color: gray;
-  position: relative;
-  transform: rotate(270deg);
-}
-
-.hand {
+  display: flex;
+  justify-content: space-around;
   position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 10px;
-  height: 150px;
-}
+  top: 20vh;
+  left: 0px;
+  mix-blend-mode: multiply;
 
-.minute {
-  width: 10px;
-  height: 25%;
-  background-color: blue;
-  transform-origin: center 0;
-}
-.hour {
-  width: 10px;
-  height: 50%;
-  background-color: red;
-  transform-origin: center 0;
-}
-
-.ahour {
-  animation: rotateahour 3s ease-out infinite;
-}
-
-.aminute {
-  animation: rotateaminute 3s ease-out infinite;
-}
-
-.bhour {
-  transform: rotate(0deg);
-  animation: rotatebhour 3s ease-out infinite;
-}
-
-.bminute {
-  transform: rotate(180deg);
-  animation: rotatebminute 3s ease-out infinite;
-}
-
-@keyframes rotateahour {
-  from {
-    transform: rotate(0deg);
+  .first {
+    height: 15vh;
+    transform: translate(-7vh, 48vh);
   }
 
-  to {
-    transform: rotate(1turn);
-  }
-}
-
-@keyframes rotateaminute {
-  from {
-    transform: rotate(90deg);
+  .second {
+    height: 10vh;
+    transform: translate(-28vh, 2vh);
   }
 
-  to {
-    transform: rotate(450deg);
+  .third {
+    height: 15vh;
+    transform: translate(9vh, 60vh);
+  }
+
+  &__pic {
+    img {
+      height: 100%;
+      width: auto;
+    }
   }
 }

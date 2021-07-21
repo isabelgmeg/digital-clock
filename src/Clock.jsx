@@ -6,16 +6,17 @@ import Minutes from './Minutes';
 
 
 const StyledClock = styled.div`
-  width: 6vw;
-  height: 6vw;
+  width: 4vw;
+  height: 4vw;
+  margin: auto;
   border-radius: 50%;
-  background-color: #ecf0f3;
   position: relative;
   transform: rotate(270deg);
   overflow: hidden;
-  box-shadow: 3px 3px 3px 0px #d1d9e6 inset, -3px -3px 3px 0px #ffffff inset;
-  inset -20px -20px 60px #ffffff;
-  clip-path: circle(60px at center)
+  margin-bottom; 2px;
+  clip-path: circle(60px at center);
+  background-color: #f2f0f6;
+  box-shadow: inset 4px 4px 8px 0 rgba(0, 0, 0, 0.05), inset -7px -7px 6px 0 hsla(0, 0%, 100%, 0.65), -4px -4px 20px 1px #fff, 4px 7px 40px -20px rgba(0, 0, 0, 0.19);
 `
 export default function Clock ({ minuteDegrees, hourDegrees, index}) { 
 

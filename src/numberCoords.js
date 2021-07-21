@@ -157,7 +157,7 @@ export const five = [
   c,
   e,
   b,
-  f,
+  c,
   d,
   a,
   b,
@@ -179,7 +179,7 @@ export const six = [
   b,
   f,
   d,
-  d,
+  e,
   b,
   c,
   d,
@@ -276,6 +276,8 @@ export const nine = [
   b,
   f,
 ];
+
+export const separation = [g, g, g, g, g, g, g];
 
 export const numbers = [
   zero,
