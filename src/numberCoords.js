@@ -157,7 +157,7 @@ export const five = [
   c,
   e,
   b,
-  f,
+  c,
   d,
   a,
   b,

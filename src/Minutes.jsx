@@ -13,7 +13,7 @@ to {
 
 const MinuteStyled = styled.div`
   height: 25%;
-  background-color: #9e9e9e;
+  background-color: #454545;
   transform-origin: center 0;
   position: absolute;
   left: 50%;
@@ -22,7 +22,7 @@ const MinuteStyled = styled.div`
   height: 150px;
   animation: ${(props) =>
       animationMinute(props.minuteDegrees, props.finalMinuteDegrees)}
-    4s ease-out infinite;
+    5s ease-out infinite;
 `;
 
 

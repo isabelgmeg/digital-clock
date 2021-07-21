@@ -4,88 +4,26 @@
 
 main {
   display: flex;
-  background-color: #ecf0f3;
+  background-color: #e9e7ee;
   height: 100vh;
 }
 
 .clock-wrap {
   display: flex;
-  width: 50%;
+  width: 80%;
   height: fit-content;
-  padding-top: 20vw;
-  padding-bottom: 20wv;
+  margin: auto;
 }
 
 .number {
-  width: 50%;
   display: grid;
+  width: 50%;
   grid-template-columns: repeat(4, 25%);
+  row-gap: 1vw;
 }
 
-.clock {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background-color: gray;
-  position: relative;
-  transform: rotate(270deg);
-}
-
-.hand {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 10px;
-  height: 150px;
-}
-
-.minute {
-  width: 10px;
-  height: 25%;
-  background-color: blue;
-  transform-origin: center 0;
-}
-.hour {
-  width: 10px;
-  height: 50%;
-  background-color: red;
-  transform-origin: center 0;
-}
-
-.ahour {
-  animation: rotateahour 3s ease-out infinite;
-}
-
-.aminute {
-  animation: rotateaminute 3s ease-out infinite;
-}
-
-.bhour {
-  transform: rotate(0deg);
-  animation: rotatebhour 3s ease-out infinite;
-}
-
-.bminute {
-  transform: rotate(180deg);
-  animation: rotatebminute 3s ease-out infinite;
-}
-
-@keyframes rotateahour {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(1turn);
-  }
-}
-
-@keyframes rotateaminute {
-  from {
-    transform: rotate(90deg);
-  }
-
-  to {
-    transform: rotate(450deg);
-  }
+.minutes,
+.hours {
+  display: flex;
+  width: 50%;
 }
