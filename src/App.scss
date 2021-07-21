@@ -3,16 +3,42 @@
 }
 
 main {
-  display: flex;
   background-color: #e9e7ee;
   height: 100vh;
+  position: relative;
+}
+
+.splash {
+  background-color: black;
+  color: white;
+  height: 20vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    font-size: 1.5rem;
+    width: 54vw;
+    margin: 0;
+    text-align: end;
+  }
+  &__pic {
+    height: 80%;
+    margin-left: 6rem;
+
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
 }
 
 .clock-wrap {
   display: flex;
   width: 80%;
-  height: fit-content;
-  margin: auto;
+  margin: 14vh auto auto auto;
+  background-size: contain;
+  justify-content: space-between;
 }
 
 .number {
@@ -23,7 +49,47 @@ main {
 }
 
 .minutes,
-.hours {
+.hours,
+.seconds {
   display: flex;
-  width: 50%;
+  width: 45%;
+}
+
+.separation {
+  display: grid;
+  grid-template-columns: 1 auto;
+  row-gap: 1vw;
+}
+
+.decoration {
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  top: 20vh;
+  left: 0px;
+  mix-blend-mode: multiply;
+
+  .first {
+    height: 15vh;
+    transform: translate(-7vh, 48vh);
+  }
+
+  .second {
+    height: 10vh;
+    transform: translate(-28vh, 2vh);
+  }
+
+  .third {
+    height: 15vh;
+    transform: translate(9vh, 60vh);
+  }
+
+  &__pic {
+    img {
+      height: 100%;
+      width: auto;
+    }
+  }
 }

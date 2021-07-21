@@ -16,9 +16,9 @@ const HourStyled = styled.div`
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 0.2vh;
+  width: 0.3vh;
   height: 150px;
-  animation: ${(props) => animationHour(props.hourDegrees, props.finalHourDegrees)} 5s ease-out infinite;
+  animation: ${(props) => animationHour(props.hourDegrees, props.finalHourDegrees)} 4s ease-in-out infinite;
 `;
 
 export default function Hours({ hourDegrees, index }){

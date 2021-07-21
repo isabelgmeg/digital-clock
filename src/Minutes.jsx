@@ -18,11 +18,11 @@ const MinuteStyled = styled.div`
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 0.2vh;
+  width: 0.3vh;
   height: 150px;
   animation: ${(props) =>
       animationMinute(props.minuteDegrees, props.finalMinuteDegrees)}
-    5s ease-out infinite;
+    4s ease-in-out infinite;
 `;
 
 

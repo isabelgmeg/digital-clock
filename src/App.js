@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from "react";
 
-import { numbers } from "./numberCoords";
+import { numbers, separation } from "./numberCoords";
+import image from "./assets/image-inverted.png";
+import imageTwo from "./assets/image.png";
 
 import "./App.scss";
 
 import Clock from "./Clock";
 
 function App() {
-  const [time, SetTime] = useState(null);
+  const minute_ms = 60000;
+  const hour_ms = minute_ms * 60;
 
   const [minutes, setMinutes] = useState(0);
-
   const [firstMinute, setFirstMinute] = useState(0);
   const [secondMinute, setSecondMinute] = useState(0);
 
@@ -45,11 +47,12 @@ function App() {
   };
 
   const formatNumbers = (number, type) => {
-    type === "hour" ? formatHours(number) : formatMinutes(number);
+    if (type === "hour") {
+      formatHours(number);
+    } else if (type === "minute") {
+      formatMinutes(number);
+    }
   };
-
-  const minute_ms = 60000;
-  const hour_ms = minute_ms * 60;
 
   const getMinutes = () => {
     console.log("minutes are setting");
@@ -83,18 +86,28 @@ function App() {
     let currentMinute = date.getMinutes();
     formatNumbers(currentHour, "hour");
     formatNumbers(currentMinute, "minute");
+
+    getMinutes();
+    getHours();
     console.log("first load");
   };
 
   useEffect(() => {
     setFirstLoad();
-    getMinutes();
-    getHours();
-  }, []);
+  }, [minutes, hours]);
 
   return (
     <div className="App">
       <main>
+        <div className="splash">
+          <h1>
+            Digital clock created with react inspired in “Humans since 1982”
+            famous clock
+          </h1>
+          <section className="splash__pic">
+            <img src={image} alt="person walking"></img>
+          </section>
+        </div>
         <div className="clock-wrap">
           <div className="hours">
             <section className="number">
@@ -121,9 +134,20 @@ function App() {
               })}
             </section>
           </div>
+          <div className="separation">
+            {separation.map((coord, index) => {
+              return (
+                <Clock
+                  key={index}
+                  hourDegrees={coord[0]}
+                  minuteDegrees={coord[1]}
+                />
+              );
+            })}
+          </div>
           <div className="minutes">
             <section className="number">
-              {numbers[5].map((coord, index) => {
+              {numbers[firstMinute].map((coord, index) => {
                 return (
                   <Clock
                     key={index}
@@ -146,6 +170,18 @@ function App() {
               })}
             </section>
           </div>
+        </div>
+
+        <div className="decoration">
+          <section className="decoration__pic first">
+            <img src={imageTwo} alt="men walking"></img>
+          </section>
+          <section className="decoration__pic second">
+            <img src={image} alt="men walking"></img>
+          </section>
+          <section className="decoration__pic third">
+            <img src={image} alt="men walking"></img>
+          </section>
         </div>
       </main>
     </div>
