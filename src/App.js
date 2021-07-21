@@ -7,6 +7,7 @@ import imageTwo from "./assets/image.png";
 import "./App.scss";
 
 import Clock from "./Clock";
+import ClockDark from "./ClockDark";
 
 function App() {
   const minute_ms = 60000;
@@ -108,6 +109,73 @@ function App() {
             <img src={image} alt="person walking"></img>
           </section>
         </div>
+
+        <div className="clock-dark">
+          <div className="clock-wrap">
+            <div className="hours">
+              <section className="number">
+                {numbers[firstHour].map((coord, index) => {
+                  return (
+                    <ClockDark
+                      key={index}
+                      hourDegrees={coord[0]}
+                      minuteDegrees={coord[1]}
+                    />
+                  );
+                })}
+              </section>
+
+              <section className="number">
+                {numbers[secondHour].map((coord, index) => {
+                  return (
+                    <ClockDark
+                      key={index}
+                      hourDegrees={coord[0]}
+                      minuteDegrees={coord[1]}
+                    />
+                  );
+                })}
+              </section>
+            </div>
+            <div className="separation">
+              {separation.map((coord, index) => {
+                return (
+                  <ClockDark
+                    key={index}
+                    hourDegrees={coord[0]}
+                    minuteDegrees={coord[1]}
+                  />
+                );
+              })}
+            </div>
+            <div className="minutes">
+              <section className="number">
+                {numbers[firstMinute].map((coord, index) => {
+                  return (
+                    <ClockDark
+                      key={index}
+                      hourDegrees={coord[0]}
+                      minuteDegrees={coord[1]}
+                    />
+                  );
+                })}
+              </section>
+
+              <section className="number">
+                {numbers[secondMinute].map((coord, index) => {
+                  return (
+                    <ClockDark
+                      key={index}
+                      hourDegrees={coord[0]}
+                      minuteDegrees={coord[1]}
+                    />
+                  );
+                })}
+              </section>
+            </div>
+          </div>
+        </div>
+
         <div className="clock-wrap">
           <div className="hours">
             <section className="number">
@@ -172,7 +240,7 @@ function App() {
           </div>
         </div>
 
-        <div className="decoration">
+        {/* <div className="decoration">
           <section className="decoration__pic first">
             <img src={imageTwo} alt="men walking"></img>
           </section>
@@ -182,7 +250,7 @@ function App() {
           <section className="decoration__pic third">
             <img src={image} alt="men walking"></img>
           </section>
-        </div>
+        </div> */}
       </main>
     </div>
   );
