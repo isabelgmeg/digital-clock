@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 
 import { numbers, separation } from "./numberCoords";
 import image from "./assets/image-inverted.png";
-import imageTwo from "./assets/image.png";
 
 import "./App.scss";
 
@@ -13,11 +12,9 @@ function App() {
   const minute_ms = 60000;
   const hour_ms = minute_ms * 60;
 
-  const [minutes, setMinutes] = useState(0);
   const [firstMinute, setFirstMinute] = useState(0);
   const [secondMinute, setSecondMinute] = useState(0);
 
-  const [hours, setHours] = useState(0);
   const [firstHour, setFirstHour] = useState(0);
   const [secondHour, setSecondHour] = useState(0);
 
@@ -47,7 +44,7 @@ function App() {
     }
   };
 
-  const formatNumbers = (number, type) => {
+  const checkTimeType = (number, type) => {
     if (type === "hour") {
       formatHours(number);
     } else if (type === "minute") {
@@ -60,7 +57,6 @@ function App() {
     setInterval(() => {
       let date = new Date();
       let currentMinute = date.getMinutes();
-      setMinutes(currentMinute);
       formatMinutes(currentMinute);
       console.log("minutes are set");
     }, minute_ms);
@@ -74,7 +70,6 @@ function App() {
       let date = new Date();
       let currentHour = date.getHours();
       console.log(currentHour);
-      setHours(currentHour);
       formatHours(currentHour);
       console.log("hours are setting");
     }, hour_ms);
@@ -85,8 +80,8 @@ function App() {
     let date = new Date();
     let currentHour = date.getHours();
     let currentMinute = date.getMinutes();
-    formatNumbers(currentHour, "hour");
-    formatNumbers(currentMinute, "minute");
+    checkTimeType(currentHour, "hour");
+    checkTimeType(currentMinute, "minute");
 
     getMinutes();
     getHours();
@@ -95,7 +90,7 @@ function App() {
 
   useEffect(() => {
     setFirstLoad();
-  }, [minutes, hours]);
+  }, []);
 
   return (
     <div className="App">
