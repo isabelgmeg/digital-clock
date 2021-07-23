@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { numbers, separation } from "./numberCoords";
+import { numbers, separation, frame } from "./numberCoords";
 import image from "./assets/image-inverted.png";
 
 import "./App.scss";
@@ -171,6 +171,17 @@ function App() {
           </div>
         </div>
 
+        <div className="frame">
+          {frame.map((coord, index) => {
+            return (
+              <Clock
+                key={index}
+                hourDegrees={coord[0]}
+                minuteDegrees={coord[0]}
+              />
+            );
+          })}
+        </div>
         <div className="clock-wrap">
           <div className="hours">
             <section className="number">
