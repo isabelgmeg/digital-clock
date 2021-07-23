@@ -291,3 +291,5 @@ export const numbers = [
   eight,
   nine,
 ];
+
+export const frame = Array(34).fill(g);
