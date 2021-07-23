@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/isabelgmeg/digital-clock/static/css/main.35264f3e.chunk.css",
+    "main.js": "/isabelgmeg/digital-clock/static/js/main.702387b0.chunk.js",
+    "main.js.map": "/isabelgmeg/digital-clock/static/js/main.702387b0.chunk.js.map",
+    "runtime-main.js": "/isabelgmeg/digital-clock/static/js/runtime-main.723287e3.js",
+    "runtime-main.js.map": "/isabelgmeg/digital-clock/static/js/runtime-main.723287e3.js.map",
+    "static/js/2.27df9cc9.chunk.js": "/isabelgmeg/digital-clock/static/js/2.27df9cc9.chunk.js",
+    "static/js/2.27df9cc9.chunk.js.map": "/isabelgmeg/digital-clock/static/js/2.27df9cc9.chunk.js.map",
+    "static/js/3.5b10dff6.chunk.js": "/isabelgmeg/digital-clock/static/js/3.5b10dff6.chunk.js",
+    "static/js/3.5b10dff6.chunk.js.map": "/isabelgmeg/digital-clock/static/js/3.5b10dff6.chunk.js.map",
+    "index.html": "/isabelgmeg/digital-clock/index.html",
+    "static/css/main.35264f3e.chunk.css.map": "/isabelgmeg/digital-clock/static/css/main.35264f3e.chunk.css.map",
+    "static/js/2.27df9cc9.chunk.js.LICENSE.txt": "/isabelgmeg/digital-clock/static/js/2.27df9cc9.chunk.js.LICENSE.txt",
+    "static/media/image-inverted.fbe63044.png": "/isabelgmeg/digital-clock/static/media/image-inverted.fbe63044.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.723287e3.js",
+    "static/js/2.27df9cc9.chunk.js",
+    "static/css/main.35264f3e.chunk.css",
+    "static/js/main.702387b0.chunk.js"
+  ]
+}
